@@ -1,1 +1,1 @@
-A comprehensive TIC TAC TOE game
+A comprehensive TIC TAC TOE game created using HTML, CSS and JS. It can be played on the browser.
