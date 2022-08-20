@@ -33,21 +33,22 @@ img {
     width: 200px;
 }
 
-table {
+#gameBoard {
+    background-color: #fff;
+    border: 1px solid #000;
     width: 600px;
     height: 400px;
-    border: 1px solid #000;
-    margin-bottom: 15px;
-    background-color: #fff;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 33.33% 33.33% 33.33%;
     cursor: pointer;
 }
 
-table, td {
+.grid-item {
     border: 1px solid #000;
-    border-collapse: collapse;
 }
 
-td:hover {
+.grid-item:hover {
     background-color: #d3d3d3;
 }
 
