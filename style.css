@@ -1,0 +1,24 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+    align-items: center;
+}
+
+img {
+    width: 200px;
+}
+
+#gameBoard {
+    width: 500px;
+    height: 300px;
+    border: 1px solid #000;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
