@@ -1,11 +1,12 @@
-const gameBoard = () => {
-    const board = [];
+const gameBoard = (() => {
+
+    let board = [];
+})();
+
+const createPlayer = (name, marker) => {
+    return {name, marker};
 }
 
-const players = () => {
+const game = (() => {
 
-}
-
-const game = () => {
-
-}
+})();
