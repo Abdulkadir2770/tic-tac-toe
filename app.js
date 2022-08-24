@@ -2,10 +2,51 @@ const createPlayer = (person, marker) => {
     return {person, marker};
 }
 
+// gameboard object
 const gameBoard = (() => {
 
+    // adding an event listener to each square
+    const squares = Array.from(document.querySelectorAll(".box"));
+
+    squares.forEach((square, index) => {
+        square.addEventListener("click", () => {
+        })
+    })
 })();
 
 const game = (() => {
 
+    // assigning each players mark
+    const playerOne = "O";
+    const playerTwo = "X";
+
+    // game starting point
+    let activePlayer = playerOne;
+    let winnerDeclared = false;
+    let remainingSpots = 9;
+
+    // displays game winner
+    let display = document.querySelector("#text");
+
+    // winning conditions
+    const winningAxes = [
+        [0,1,2],
+        [3,4,5],
+        [6,7,8],
+        [0,3,6],
+        [1,4,7],
+        [2,5,8],
+        [0,4,8],
+        [2,4,6],
+    ];
+
+    //return
+    return {
+        activePlayer,
+        winnerDeclared,
+        remainingSpots,
+        display
+    };
+
 })();
+
