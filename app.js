@@ -10,6 +10,13 @@ const gameBoard = (() => {
 
     squares.forEach((square, index) => {
         square.addEventListener("click", () => {
+            // marks the clicked square w/ an O
+            square.innerText = game.activePlayer;
+            square.style.pointerEvents = "none";
+            // updates the number of squares available
+            game.remainingSpots -= 1;
+
+            console.log(game.remainingSpots);
         })
     })
 })();
@@ -45,7 +52,9 @@ const game = (() => {
         activePlayer,
         winnerDeclared,
         remainingSpots,
-        display
+        display,
+        playerOne,
+        playerTwo
     };
 
 })();
