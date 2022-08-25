@@ -15,8 +15,10 @@ const gameBoard = (() => {
             square.style.pointerEvents = "none";
             // updates the number of squares available
             game.remainingSpots -= 1;
+            console.log(game.remainingSpots);
             //########## I need to find a way toggle between the users choices
             game.nextPlayer();
+            game.checkWinner();
         })
     })
 })();
@@ -54,16 +56,22 @@ const game = (() => {
         }) 
     }
 
+
     // player change
     function nextPlayer() {
         this.activePlayer === playerOne? this.activePlayer = playerTwo: this.activePlayer = playerOne;
 
+        // changes the background color of each player letter notation to green
         if(this.activePlayer === playerTwo) {
             document.querySelector(".p1_score").style.backgroundColor = "#d3d3d3";
             document.querySelector(".p2_score").style.backgroundColor = "lightgreen";
         } else {
             document.querySelector(".p2_score").style.backgroundColor = "#d3d3d3";
             document.querySelector(".p1_score").style.backgroundColor = "lightgreen";
+        }
+
+        if(game.remainingSpots === 0) {
+            document.querySelector(".p2_score").style.backgroundColor = "#d3d3d3";
         }
 
     }
