@@ -15,7 +15,6 @@ const gameBoard = (() => {
             square.style.pointerEvents = "none";
             // updates the number of squares available
             game.remainingSpots -= 1;
-            console.log(game.remainingSpots);
             //########## I need to find a way toggle between the users choices
             game.nextPlayer();
             game.checkWinner();
@@ -56,10 +55,7 @@ const game = (() => {
     // declares a winner
     function checkWinner() {
         winningAxes.forEach((item, index) => {
-        
-            if(gameBoard.squares[item[0]] === this.activePlayer && gameBoard.squares[item[1]] === this.activePlayer && gameBoard.squares[item[2] === this.activePlayer]) {
-                console.log(gameBoard.squares[item[0]]);
-            }
+            console.log(item[index]);
         }) 
     }
 
