@@ -55,10 +55,9 @@ const game = (() => {
     // declares a winner
     function checkWinner() {
         winningAxes.forEach((item, index) => {
-            console.log(item[index]);
+            // was not able to get the logic 
         }) 
     }
-
 
     // player change
     function nextPlayer() {
@@ -78,6 +77,15 @@ const game = (() => {
         }
 
     }
+
+    //restarts the game when the btn was clicked
+    function windowRestart() {
+        const restartBtn = document.querySelector("#restartBtn");
+        restartBtn.addEventListener("click", () => {
+            window.location.reload();
+        })
+    }
+    windowRestart();
 
     //return
     return {
