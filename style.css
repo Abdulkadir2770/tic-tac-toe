@@ -57,7 +57,7 @@ img {
     background-color: #d3d3d3;
 }
 
-.score {
+.p1_score, .p2_score {
     text-align: center;
     font-weight: bold;
     margin-top: 5px;
