@@ -1,0 +1,25 @@
+@media only screen and (max-width: 500px) {
+    .container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+    }
+
+    #gameBoard {
+        width: 300px;
+        height: 300px;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        margin-left: 20%;
+    }
+
+    img {
+        width: 100px;
+    }
+
+    .player_score, .computer_score {
+        font-size: 20px;
+    }
+}
