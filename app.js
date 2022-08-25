@@ -21,6 +21,10 @@ const gameBoard = (() => {
             game.checkWinner();
         })
     })
+
+    return {
+        squares
+    }
 })();
 
 const game = (() => {
@@ -52,7 +56,9 @@ const game = (() => {
     // declares a winner
     function checkWinner() {
         winningAxes.forEach((item, index) => {
-            console.log(item);
+            if(gameBoard.squares[item[0]] === this.activePlayer && gameBoard.squares[item[1]] === this.activePlayer && gameBoard.squares[item[2] === this.activePlayer]) {
+                console.log(gameBoard.squares[item[0]]);
+            }
         }) 
     }
 
